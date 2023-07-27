@@ -1,14 +1,18 @@
-# GameCollection
+<h1 align="center">GameCollection</h1>
 
+<div align="center">
 Organize sua coleção de games de um jeito prático e divertido com este sistema de gerenciamento! 
 
 O projeto foi desenvolvido no Framework Spring, utilizando a arquitetura API Rest e a comunicação com o banco de dados.
 
-Diferencial: Reposicionar os jogos na coleção, atualizando as informações diretamente no banco de dados. Agora, organizar sua coleção nunca foi tão fácil e eficiente!
+<b>Diferencial:</b> Reposicionar os jogos na coleção, atualizando as informações diretamente no banco de dados.
+
+Agora, organizar sua coleção nunca foi tão fácil e eficiente!
+</div> 
 
 <h2> 🛠 Tecnologias: </h2>
 
-As seguintes ferramentas foram usadas na construção do projeto:
+As seguintes tecnologias foram usadas na construção do projeto:
 
 ![Java](https://img.shields.io/badge/Java-ED8B00?style=flat&logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring-6DB33F?style=flat&logo=spring&logoColor=white)
@@ -74,7 +78,6 @@ class BelongingPK {
 }
 Game -- Belonging : n-to-n
 GameList -- Belonging : n-to-n
-Belonging --> BelongingPK
 ```
 O Projeto é composto por 3 Recursos (*Conjunto de Classes e Interfaces responsáveis por mapear um tipo de Objeto e persistir no Banco de dados Relacional*) e uma Classe auxiliar:
 
@@ -83,7 +86,7 @@ O Projeto é composto por 3 Recursos (*Conjunto de Classes e Interfaces respons�
 | Game | Recurso responsável por definir o Objeto Game (jogos da nossa coleção) |
 | GameList | Recurso responsável por definir o Objeto GameList (coleção) |
 | Belonging | Classe de associação entre Game  e GameList. Recurso responsável por indicar a posição do Game dentro do GameList. |
-| Belonging PK | Classe auxiliar, que será utilizada como chave primaria múltipla,  composto por 2 atributos ‘game_id’ e ‘gameList_id’ |
+| Belonging PK | Classe auxiliar, que será utilizada como chave primaria múltipla,  composto por 2 atributos ‘game_id’ e ‘list_id’ |
 
 Cada Recurso gera uma tabela no Banco de dados da aplicação, exceto a Classe auxiliar.
 
